@@ -4,21 +4,33 @@
   box-sizing: border-box;
   font-family:Roboto ;
 }
-/* .navbar{
+.navbar{
   position: fixed;
-  height: 100px;
-  border: 1px solid black;
+  height: 80px;
+  top: 0;
+  left: 0;
+  /* border: 1px solid black; */
   display: flex;
-  justify-content: space-evenly;
-  box-shadow: 0 0 4px black;
+  justify-content: space-between;
+  box-shadow: 0 1 5px rgba(0,0,0,0.1);
   width: 100%;
+  background-color: #fff;
   z-index: 5;
+   padding: 0 20px;
 }
-.nav-logo{
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+/* .nav-logo{
   height: 20px;
   width: 100px;
-}
-.logo{
+} */
+/* .logo{
   height: 30px;
   font-size: 1rem;
   width: 100px;
@@ -27,7 +39,8 @@
   align-items: center;
   justify-content: center;
   transform: translateY(50%);
-}
+} */
+ /*Menu Button*/
 .nav-button{
   display: flex;
   align-items: center;
@@ -38,18 +51,24 @@
 }
 .nav-button a{
   text-decoration: none;
-  color: rgb(35, 31, 31);
-  font-weight: bolder;
+  color: #282c3f;
+  font-weight: 700;
+  font-size: 18px;
+
 }
 .nav-button a sup{
-  color: rgb(207, 47, 74);
+  color: #ff3f6c;
+  font-size: 14px;
+
 }
 .nav-search {
   display: flex;
   align-items: center;
-  background-color: rgb(222, 219, 219);
+  /* background-color: rgb(222, 219, 219); */
+   background-color: #f5f5f6;
+  border-radius: 4px;
   padding: 5px 10px;
-  width: 750px; Adjust width as needed
+   width: 750px; /*Adjust width as needed */
 }
 
 .search-input {
@@ -58,40 +77,65 @@
   font-size:20px;
   outline: none;
   padding: 8px;
-  background: #faf5f5ca;
+  background: transparent;
   height: 50px;
 }
 
 .search-icon {
-  color: #555;
-  font-size: 16px;
+  color: #696e79;
+  font-size: 20px;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 10px;
   background: #faf5f5ca;
   padding: 15px;
 }
-/*
+
 
 .nav-prof{
   display: flex;
-  width: 20%;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
 }
-.nav-profile i{
-  position: relative;
+.nav-prof div {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  font-size: 16px;
+  color: #282c3f;
+}
+
+.nav-prof i {
+  font-size: 18px;
+  margin-bottom: 2px;
 }
 
 .hero-section{
   position: relative;
   transform: translateY(100px);
-  width: 80%;
-  margin: 0 10% ;
-  height: 120px;
+  width: 100%;
+  margin: 0 auto;
+  /* height: 120px; */
 }
+.hero-section > div {
+  width: 100%;
+}
+.hero-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Section-specific image sizing */
+.main1 img,
+.main2 img,
+.main4 img,
+.main5 img,
+.main6 img,
+.main7 img {
+  height: auto;
+}
+
 .main2{
   height: 800px;
   width: 95%;
@@ -101,7 +145,7 @@
 
 .main4 {
   position: relative;
-  width: 90%; /* adjust size 
+  width: 90%; /* adjust size */
   height: 200px;
   perspective: 1000px;
 }
@@ -120,8 +164,8 @@
   transform-style: preserve-3d;
   animation: rotateX 3s infinite ease-in-out;
 }
-*/
-/* Stagger each image's animation with delays *//*
+
+/* Stagger each image's animation with delays */
 .main4 img:nth-child(1) {
   animation-delay: 0s;
 }
@@ -153,8 +197,8 @@
     opacity: 0;
     z-index: 1;
   }
-}*/
-/* Image container *//*
+}
+/* Image container */
 .main6 {
   position: relative;
   width: 100%;
@@ -172,7 +216,7 @@
   animation: rotate 4.5s infinite ease-in-out;
 }
 
-/* Staggered delays for 3 images *//*
+/* Staggered delays for 3 images */
 .main6 img:nth-child(1) {
   animation-delay: 0s;
 }
@@ -182,8 +226,8 @@
 .main6 img:nth-child(3) {
   animation-delay: 3s;
 }
-*/
-/* Flip animation *//*
+
+/* Flip animation */
 @keyframes flipY {
   0% {
     transform: rotateY(0deg);
@@ -201,8 +245,7 @@
     z-index: 1;
   }
 }
-*/
-/* Dot loader*//* 
+/* Dot loader*/ 
 .dot-loader {
   display: flex;
   gap: 10px;
@@ -220,7 +263,7 @@
   animation: activeDot 4.5s infinite;
 }
 
-/* Delays for each dot to match image flips *//*
+/* Delays for each dot to match image flips */
 .dot-loader span:nth-child(1) {
   animation-delay: 0s;
 }
@@ -238,7 +281,7 @@
   33%, 100% {
     background-color: #dcdcdc;
   }
-} */
+}
  .shop-section{
   display: flex;
   justify-content: space-evenly;
@@ -249,7 +292,7 @@
   width: 14%; /* fixed card width */
   height: 360px;
   border: 2px solid black;
-  background: rgb(249, 167, 15);
+  background: rgb(204, 142, 26);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,16 +308,21 @@
   background-repeat: no-repeat;
   background-position: center;
   /* background: #000; */
+  
 }
 
-.box1 p{
+.box p{
   flex-direction: column;
   font-size: 16px;
   font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
 }
-.box1 p{
+.box h3{
   font-size: 18px;
   font-weight: bold;
+  color: white;
+   margin-bottom: 10px;
 }
 .box1,
 .box7,
@@ -292,4 +340,101 @@
 }
 .box:hover{
   cursor: pointer;
+}
+.foot-panel1{
+margin-top: 30px;
+display: flex;
+justify-content: space-evenly;
+/* color: rgb(229, 236, 243); */
+}
+.foot-panel1 a{
+text-decoration: none;
+color: rgb(88, 89, 90);
+}
+.foot-panel1 h3{
+text-decoration: none;
+margin: 25px 0;
+}
+.btn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-get button {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.btn-get button:hover {
+  opacity: 0.85;
+}
+
+.btn-get i {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+.btn-get p {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.btn-get p:first-child {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.btn-get p:last-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+.foot-panel1 a i {
+  /* border: 1px solid black; */
+ padding: 10px;
+}
+
+.footer-panel2{
+  border-top: 1px solid rgb(205, 201, 201);
+  border-bottom: 1px solid rgb(205, 201, 201);
+  height: 200px;
+  width: 100%;
+  margin-top: 15px;
+  z-index: 1;
+}
+.footer-panel2 h2{
+  transform: translateY(-15px);
+  z-index: 2;
+}
+.p-footer2{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.p-footer2 a{
+  color: rgb(86, 86, 195);
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer-panel3{
+  border-top: 1px solid rgb(205, 201, 201);
+  border-bottom: 1px solid rgb(205, 201, 201);
+}
+.footer-panel3 h2{
+  margin: 30px 0;
+}
+.footer-panel3 p{
+  color: rgb(88, 89, 90);
+}
+.footer-panel4 h2{
+  margin: 35px 0 15px 0;
 }
