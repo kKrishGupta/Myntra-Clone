@@ -135,12 +135,51 @@
 .main7 img {
   height: auto;
 }
+.main2,
+.main4,
+.main5,
+.main6 {
+  height: auto;
+}
 
 .main2{
   height: 800px;
   width: 95%;
   background-size:cover ;
   background-repeat: no-repeat;
+}
+.mains {
+  width: 100%;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.main4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.main4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.main7 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main7 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .main4 {
@@ -342,7 +381,7 @@
   cursor: pointer;
 }
 .foot-panel1{
-margin-top: 30px;
+margin-top: 110px;
 display: flex;
 justify-content: space-evenly;
 /* color: rgb(229, 236, 243); */
@@ -406,7 +445,7 @@ margin: 25px 0;
 .footer-panel2{
   border-top: 1px solid rgb(205, 201, 201);
   border-bottom: 1px solid rgb(205, 201, 201);
-  height: 200px;
+  height: 150px;
   width: 100%;
   margin-top: 15px;
   z-index: 1;
@@ -437,4 +476,78 @@ margin: 25px 0;
 }
 .footer-panel4 h2{
   margin: 35px 0 15px 0;
+}
+/* Footer Panel 4 Styling */
+.footer-panel4 {
+  background-color: #ffffff;
+  color: #282c3f;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* Main headings */
+.footer-panel4 h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #282c3f;
+}
+
+/* Subheadings */
+.footer-panel4 h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #3e4152;
+}
+
+/* Paragraph text */
+.footer-panel4 p {
+  font-size: 14px;
+  color: #696b79;
+  margin-bottom: 15px;
+}
+
+/* Ordered list styling */
+.footer-panel4 ol,
+.footer-panel4 ul {
+  padding-left: 20px;
+}
+
+.footer-panel4 li {
+  margin-bottom: 15px;
+  list-style: decimal;
+}
+
+.footer-panel4 li p {
+  margin: 0;
+}
+
+/* Spacing for sections */
+.footer-panel4 > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-panel4 {
+    padding: 20px;
+  }
+  
+  .footer-panel4 h2 {
+    font-size: 18px;
+  }
+  
+  .footer-panel4 h3 {
+    font-size: 15px;
+  }
+  
+  .footer-panel4 p {
+    font-size: 13px;
+  }
 }
